@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8"/>
+    <title>Leyes de Newton</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="sugerenciaMovil.css" rel="stylesheet" media="screen and (max-width: 1023px)">
+    <link href="sugerenciaLaptop.css" rel="stylesheet" media="screen and (min-width: 1024px)">
+   
+</head>
+
+ 
+<body onload="mostrarSeccion('aceleracionSeccion')">
+    <header>
+        <div class="header-container">
+          <img class="atomo" src="https://raw.githubusercontent.com/RomuloToribioRojas/ProyectoFisica-III/main/asset/img/logo.png">
+          <h1>Fisica.NET</h1> 
+          <nav id="main-nav">
+            <ul>
+              <li><a class="listadoMenuInicio" href="#inicio">Inicio</a></li>
+              <li><a class="listadoMenuPrimera" href="index.html">Primera Ley</a></li>
+              <li><a class="listadoMenuSegunda" href="index.html">Segunda Ley</a></li>
+              <li><a class="listadoMenuTercera" href="index.html">Tercera Ley</a></li>
+              <li><a class="listadoMenuSimulador" href="segundaLey.html">Simulador</a></li>
+              <li><a class="listadoMenuSugerencias" href="sugerencia.html">Sugerencias</a></li>            
+            </ul>
+            <button id="close-btn" aria-label="Close Menu">X</button>
+          </nav>
+        </div>
+        <button id="menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+      </header>
+
+    <section class="Sugerencia">
+      <h5 class="textoSugerencia">Gracias por tus sugerencias, mejorarán nuestro sitio web.</h5>
+      <form>
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre"><br><br>
+    
+        <label for="comentario">Comentario:</label><br>
+        <textarea id="comentario" name="comentario" rows="4" cols="50"></textarea><br><section>
+    
+        <input class="boton" type="button" value="Enviar" onclick="enviarSugerencia()">
+      </form>
+      <script src="script.js"></script>
+      <script src="app.js"></script>
+      <script src="sugerencia.js"></script>
+    </section>
+</body> 
+<footer>
+  <div class="textoPrincipal">
+    <h3 class="texto">
+        FISICA.NET
+    </h3>
+  </div>
+  <div class="contendorImagenFooter">
+    <span class="texto20">
+      "Yo quiero mi 20"
+    </span>
+      <img class="imagenCuy" src="https://raw.githubusercontent.com/RomuloToribioRojas/proyectofisica/main/asset/img/cuy.png"/>
+  </div> 
+  </footer>
+ 
+</html>

@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8"/>
+    <title>Leyes de Newton</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="segundaLeyMovil.css" rel="stylesheet" media="screen and (max-width: 1023px)">
+    <link href="segundaLeyLaptop.css" rel="stylesheet" media="screen and (min-width: 1024px)">
+   
+   
+</head>
+
+ 
+<body onload="mostrarSeccion('aceleracionSeccion')">
+    <header>
+        <div class="header-container">
+          <img class="atomo" src="https://raw.githubusercontent.com/RomuloToribioRojas/ProyectoFisica-III/main/asset/img/logo.png">
+          <h1>Fisica.NET</h1> 
+          <nav id="main-nav">
+            <ul>
+              <li><a class="listadoMenuInicio" href="#inicio">Inicio</a></li>
+              <li><a class="listadoMenuPrimera" href="index.html">Primera Ley</a></li>
+              <li><a class="listadoMenuSegunda" href="index.html">Segunda Ley</a></li>
+              <li><a class="listadoMenuTercera" href="index.html">Tercera Ley</a></li>
+              <li><a class="listadoMenuSimulador" href="segundaLey.html">Simulador</a></li>
+              <li><a class="listadoMenuSugerencias" href="sugerencia.html">Sugerencias</a></li>            
+            </ul>
+            <button id="close-btn" aria-label="Close Menu">X</button>
+          </nav>
+        </div>
+        <button id="menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+      </header>
+
+        <section class="simuladorPrimeraLeyA" id="aceleracionSeccion">
+            <div class="contenidoDeSimuladorA">
+                <div class="contenidoSimuladorPrimeraLeyA">
+                    <a id="aceleracion" class="tituloA" href="SegundaLey.html" > 2da Ley</a>
+                </div>
+                
+            </div>
+
+            <div class="PrimeraLeyTextoA">
+                <p class="conA">La aceleración es el nombre que le damos a cualquier proceso en donde la velocidad cambia. Como la velocidad es una rapidez y una dirección, solo hay dos maneras para que aceleres: cambia tu rapidez o cambia tu dirección (o cambia ambas).</p>
+            </div>
+
+            <div class="PrimeraLeyFormulaA">
+                    <p class="forA">Formula:</p>
+                    <p class="formulaA"><b> a = F / m </b></p>
+            </div>
+
+            <div class="PrimeraLeyOpcionesA">
+                <form action="#">
+                    <div class="nombreA">
+                        <button id="aceleracionNoneA" class="cambioA">ACELERACÍON</button>
+                        <button id="fuerzaNoneA" class="cambioA">FUERZA</button>
+                        <button id="masaNoneA" class="cambioA">MASA</button>
+                    </div>
+
+    
+
+                    <div class="numerosA">
+                        <input type="number" id="fuerzaA">
+                        <label><b class="n">N</b></label>
+                        <label><b class="formulasA">/</b></label>
+                        <input type="number" id="masaA">
+                        <label><b>Kg</b></label>
+                        <label><b class="igual">=</b></label>
+                        <input type="number" id="aceleracionA" readonly>
+                        <label><b>m/s^2</b></label>
+                    </div>
+                    
+                            
+                    <div class="bontondecalculoA">
+                    <button class="calcularA" onclick="calcularAceleracion(event)">Calcular</button>
+                    <button class="limpiar" onclick="limpiarAceleracion()">Limpiar</button>
+                    </div>
+             </div>
+        </section>
+        
+        <section class="simuladorPrimeraLey" id="fuerzaSeccion">
+          <div class="contenidoDeSimulador">
+              <div class="contenidoSimuladorPrimeraLey">
+                  <a class="titulo" href="SegundaLey.html">2da Ley</a>
+              </div>
+          </div>
+
+          <div class="PrimeraLeyTexto">
+              <p class="con">La fuerza es una magnitud vectorial que razón de cambio
+                  de momento lineal entre dos partículas o sistemas de partículas. Según una definición clásica, fuerza es todo agente capaz de modificar la cantidad de movimiento o la forma de los materiales.</p>
+          </div>
+
+          <div class="PrimeraLeyFormula">
+              <p class="for">Formula:</p>
+              <p class="formula"><b> F = m . a </b></p>
+          </div>
+
+          <div  class="PrimeraLeyOpciones">
+              <form action="#">
+                  <div class="nombre">
+                      <button class="cambio" id="fuerzaNoneF">FUERZA</button>
+                      <button class="cambio" id="masaNoneF" >MASA</button>
+                      <button class="cambio" id="aceleracionNoneF">ACELERACIÓN</button>
+                  </div>
+
+                  <div class="numeros">
+                      <input type="number" id="masaF"> 
+                      <label><b class="formulas"> X </b></label>
+                      <input type="number" id="aceleracionF"> <label><b class="formulas"> m/s^2 </b></label>
+                      <label><b class="igual">=</b></label>
+                      <input type="number" id="fuerzaF" readonly> 
+                      <label><b class="formulas"> N </b></label>
+                  </div>
+                      
+                  <div class="bontonfuerza">
+                      <button class="calcular" onclick="calcularFuerza(event)">Calcular</button>
+                      <button class="limpiar" onclick="limpiarFuerza()">Limpiar</button>
+                  </div>
+              </form>
+          </div>  
+
+        </section>
+       
+        <section class="simuladorPrimeraLeyM" id="masaSeccion">
+                <div class="contenidoDeSimuladorM">
+                    <div class="contenidoSimuladorPrimeraLeyM">
+                        <a class="tituloM" href="SegundaLey.html" >2da Ley</a>
+                    </div>
+                </div>
+
+                <div class="PrimeraLeyTextoM">
+                    <p class="conM">La masa es una magnitud física y propiedad general de la materia​ que expresa la inercia o resistencia al cambio de movimiento de un cuerpo. De manera más precisa es la propiedad de un cuerpo que determina la aceleración del mismo, cuando este se encuentra bajo la influencia de una fuerza dada.​</p>
+                </div>
+
+                <div class="PrimeraLeyFormulaM" > 
+                    <p class="forM">Formula:</p>
+                    <p class="formulaM"><b> m = F / a </b> </p>
+                </div>
+                    
+                <div class="PrimeraLeyOpcionesM">
+                    <form action="#">
+                        <div class="nombreM">
+                            <button class="cambioM" id="masaNoneM">MASA</button>
+                            <button class="cambioM" id="fuerzaNoneM">FUERZA</button>
+                            <button class="cambioM" id="aceleracionNoneM">ACELERACIÓN</button>
+                        </div>x
+            
+                        <div class="numerosM">
+                            <input type="number" id="fuerzaM"> <label><b class="nM">N</b></label>
+                            <label><b class="formulasM">/</b></label>
+                            <input type="number" id="aceleracionM"> <label><b>m/s^2</b></label>
+                            <label><b class="igual">=</b></label>
+                            <input type="number" id="masaM" readonly>
+                             <label><b>Kg</b></label>
+                        </div>
+
+                        <div class="bontondecalculo">
+                            <button class="botonMasa" onclick="calcularMasa(event)">Calcular</button>
+                            <button class="limpiar" onclick="limpiarMasa()">Limpiar</button>
+                        </div>
+                    </form>
+                </div>
+        </section>
+    </body>      
+    <footer>
+        <div class="textoPrincipal">
+            <h3 class="texto">FISICA.NET</h3>
+        </div>
+                
+        <div class="contendorImagenFooter">
+            <span class="texto20">"Yo quiero mi 20"</span>
+            <img class="imagenCuy" src="https://raw.githubusercontent.com/RomuloToribioRojas/ProyectoFisica-III/main/asset/img/cuy.png">
+        </div>
+    </footer>
+    <script src="segundaLey.js"></script>
+    <script src="app.js"></script>
+</html>
+            
+
+
+
+
+
+
+
